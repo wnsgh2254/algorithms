@@ -1,16 +1,20 @@
-A, B = [], []
+import sys
+input = sys.stdin.readline
 
-N, M = map(int, input().split())
+a,b = map(int, input().split())
 
-for row in range(N):
-    row = list(map(int, input().split()))
-    A.append(row)
+a_a = []
+a_b = []
 
-for row in range(N):
-    row = list(map(int, input().split()))
-    B.append(row)
-    
-for row in range(N):
-    for col in range(M):
-        print(A[row][col] + B[row][col], end=' ')
+for i in range(a):
+    arr = list(map(int, input().split()))
+    a_a.append(arr)
+
+for i in range(a):
+    arr = list(map(int, input().split()))
+    a_b.append(arr)
+
+for i in range(a):
+    for j in range(b):
+        print(a_a[i][j] + a_b[i][j], end=" ")
     print()
